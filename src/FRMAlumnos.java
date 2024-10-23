@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.lang.Integer.*;
 
 public class FRMAlumnos extends JFrame{
     private JPanel JPAlumnos;
@@ -20,6 +21,7 @@ public class FRMAlumnos extends JFrame{
 
     ButtonGroup libros=new ButtonGroup();
     int contador=0;
+
 
     public FRMAlumnos(Alumnos[] alumnos,FRMMenu frmMenu) {
 
@@ -77,7 +79,7 @@ public class FRMAlumnos extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 limpiar();
                 if (posible()==true){
-                    alumnos[contador]=new Alumnos(JTNombre.getText(),Integer.getInteger(JTMatricula.getText()),JLIDias.getSelectedValue(),libros());
+                    alumnos[contador]=new Alumnos(JTNombre.getText(),Integer.parseInt(JTMatricula.getText()),JLIDias.getSelectedValue(),libros());
                     contador++;
                     JLMensaje.setText("Registro hecho con exito");
                 }else {JLMensaje.setText("Complete los datos");}

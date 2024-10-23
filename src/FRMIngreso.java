@@ -48,7 +48,7 @@ public class FRMIngreso extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 mensaje();
                 boolean contrasena=contrasena(),usuario=usuario(),posible=validaEspacios();
-                if(posible==true){
+                if(posible==true && vacio()==false){
                     if (contrasena == true && usuario == true) {
                         FRMMenu frmMenu=new FRMMenu();
                         frmMenu.setVisible(true);
@@ -127,5 +127,12 @@ public class FRMIngreso extends JFrame{
             oskar.requestFocus();//pasar el focus al siguiente input
             mensaje();
         }
+    }
+
+    private boolean vacio(){
+        boolean vacio=true;
+        if (usuario[0]!=null){
+            vacio=false;
+        }return vacio;
     }
 }

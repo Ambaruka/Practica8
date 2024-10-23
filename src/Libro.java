@@ -1,13 +1,13 @@
 public class Libro {
     private String nombre;
-    private int añoPublicacion;
+    private int Publicacion;
     private boolean disponible;
     private String genero;
 
-    public Libro(String genero, String nombre, int añoPublicacion, boolean disponible) {
+    public Libro(String genero, String nombre, int Publicacion, boolean disponible) {
         this.genero = genero;
         this.nombre = nombre;
-        this.añoPublicacion = añoPublicacion;
+        this.Publicacion = Publicacion;
         this.disponible = disponible;
     }
 
@@ -20,11 +20,11 @@ public class Libro {
     }
 
     public int getAñoPublicacion() {
-        return añoPublicacion;
+        return Publicacion;
     }
 
     public void setAñoPublicacion(int añoPublicacion) {
-        this.añoPublicacion = añoPublicacion;
+        this.Publicacion = Publicacion;
     }
 
     public boolean isDisponible() {
